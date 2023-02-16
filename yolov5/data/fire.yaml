@@ -1,0 +1,7 @@
+path: ../datasets/fire/images
+train: train
+val: val
+
+# Classes
+names:
+  0: fire

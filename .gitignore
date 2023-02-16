@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+.idea
+__pycache__
+yolov5/runs
+yolov5/*.pt
+datasets/
+deprecated/
