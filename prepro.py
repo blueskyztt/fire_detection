@@ -9,7 +9,7 @@ import argparse
 
 random.seed(12)
 
-classes = ["fire"]
+classes = ["fire", "smoke"]
 
 
 def convert(size, box):
@@ -83,7 +83,8 @@ def voc2yolo():
     voc Annotations to yolo Annotations
     :return:
     """
-    all_xml_files = glob.glob(os.path.join(args.data_root, "Annotations/*.xml"))
+    # all_xml_files = glob.glob(os.path.join(args.data_root, "Annotations/*.xml"))
+    all_xml_files = glob.glob(os.path.join(args.data_root, "annotations/*.xml"))
     # print(all_xml_files)
     for xml_file in tqdm(all_xml_files):
         target_dir = os.path.join(args.data_root, "labels")
@@ -99,7 +100,8 @@ def split_data():
     split data to train and val
     :return:
     """
-    all_img_files = glob.glob(os.path.join(args.data_root, "JPEGImages/*.jpg"))
+    # all_img_files = glob.glob(os.path.join(args.data_root, "JPEGImages/*.jpg"))
+    all_img_files = glob.glob(os.path.join(args.data_root, "images/*.jpg"))
     all_label_files = glob.glob(os.path.join(args.data_root, "labels/*.txt"))
     all_img_files = sorted(all_img_files)
     all_label_files = sorted(all_label_files)
