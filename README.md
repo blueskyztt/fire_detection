@@ -75,30 +75,3 @@ The result of detection is shown below:
 ## Reference
 
 1. https://github.com/ultralytics/yolov5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
