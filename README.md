@@ -58,7 +58,7 @@ python train.py --data fire.yaml --epochs 50
 ## 6 Inference
 
 ```shell
-cd yolov5;
+cd yolov5
 
 weights_file="./runs/train/exp12/weights/best.pt"
 img_file="../datasets/fire/images/val/fire_000022.jpg"
