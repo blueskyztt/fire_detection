@@ -6,3 +6,6 @@ yolov5/runs
 yolov5/*.pt
 datasets/
 deprecated/
+torchserve/logs/
+torchserve/model_store/
+torchserve/best.torchscript.pt
