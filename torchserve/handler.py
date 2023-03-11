@@ -1,6 +1,6 @@
 # custom handler file
 
-"""Custom TorchServe model handler for YOLOv5 models.
+"""Custom TorchServe model handler for YOLOv5 models
 """
 
 from ts.torch_handler.base_handler import BaseHandler
