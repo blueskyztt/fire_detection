@@ -12,7 +12,10 @@ Among them, target detection is a more practical and challenging computer vision
 combination of image classification and localization.
 A practical application scenario of target detection is unmanned driving: if an effective target detection system can be
 loaded on the unmanned vehicle, then the unmanned vehicle can quickly detect objects such as pedestrians and vehicles.
-In recent years, object detection algorithms have made great breakthroughs. One of the target detection algorithms is
+In recent years, object detection algorithms have made great breakthroughs. Target detection algorithms include R-CNN,
+SPP-net, SSD, YOLO algorithm, etc.
+
+One of the target detection algorithms is
 the YOLO algorithm, which full name is You Only Look Once: Unified, Real-Time Object
 Detection.
 
@@ -127,6 +130,37 @@ when the GPU Speed is the same, the AP accuracy of the YOLOv5s algorithm is the 
 higher the prediction accuracy of the model. The
 other three algorithms, on this basis, continue to deepen and widen the network, and the AP accuracy is also
 continuously improved, but the speed consumption is also increasing.
+
+## 3 R-CNN
+
+### 3.1 Basic idea of R-CNN
+
+Step1. For the pictures in the training data set, we use the Selective Search algorithm to generate about 2000 candidate
+boxes. These
+candidate boxes may or may not be the final goal.
+
+Step2. Scale the candidate frame of Step1 into a 227*227 square.
+
+Step3. Input the squares of Step2 into the same ConvNet one by one to get the features.
+
+Step4. Input features into SVM for classification; Input the features into the bounding box for regression.
+
+Step5. We can get final detections.
+
+![avatar](./pic/pic07.png)
+
+### 3.2 Shortcomings of R-CNN
+
+- The amount of calculation is large and the calculation is repeated. Extracting about 2000 candidate boxes through
+  selective search requires a lot of calculations, and a lot of calculations are repeated.
+
+- Multiple-stage pipeline：Training is divided into several stages.
+
+- Training takes time and takes up a lot of disk space. The convoluted feature data must also be saved to the local
+  disk.
+
+
+
 
 
 
