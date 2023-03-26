@@ -139,7 +139,7 @@ Step1. For the pictures in the training data set, we use the Selective Search al
 boxes. These
 candidate boxes may or may not be the final goal.
 
-Step2. Scale the candidate frame of Step1 into a 227*227 square.
+Step2. Scale the candidate boxes of Step1 into a 227*227 square.
 
 Step3. Input the squares of Step2 into the same ConvNet one by one to get the features.
 
@@ -148,6 +148,8 @@ Step4. Input features into SVM for classification; Input the features into the b
 Step5. We can get final detections.
 
 ![avatar](./pic/pic07.png)
+
+Related paper on R-CNN: https://arxiv.org/abs/1311.2524v3
 
 ### 3.2 Shortcomings of R-CNN
 
@@ -158,6 +160,10 @@ Step5. We can get final detections.
 
 - Training takes time and takes up a lot of disk space. The convoluted feature data must also be saved to the local
   disk.
+
+
+ 
+
 
 
 
